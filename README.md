@@ -126,25 +126,29 @@ DELETE  http://localhost:3000/api/students/1
            +--------------------+
            | SQLite Database    |
            +--------------------+
+
 C2: Container Diagram
-  +---------------------------+
-  |      Presentation Layer    |
-  |  - routes/studentRoutes.js |
-  |  - controllers/studentController.js |
-  +------------+--------------+
-               |
-               v
-  +---------------------------+
-  |       Business Layer       |
-  |  - services/studentService.js |
-  +------------+--------------+
-               |
-               v
-  +---------------------------+
-  |        Data Layer          |
-  |  - SQLite Database         |
-  |  - direct SQL queries      |
-  +---------------------------+
++---------------------------+
+| Presentation Layer        |
+| - routes/studentRoutes.js |
+| - controllers/studentController.js |
++------------+--------------+
+             |
+             v
++---------------------------+
+| Business Layer            |
+| - services/studentService.js |
++------------+--------------+
+             |
+             v
++---------------------------+
+| Data Layer                |
+| - SQLite Database         |
+| - direct SQL queries      |
++---------------------------+
+
+
+
 Layer Responsibilities
 1. Presentation Layer
 
